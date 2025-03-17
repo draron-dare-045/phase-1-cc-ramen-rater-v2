@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
   <title>Ramen Rater</title>
   <link rel="stylesheet" type="text/css" href="styles.css" />
-  <script defer type="module" src="./src/index.js"></script>
 </head>
 
 <body>
@@ -13,12 +12,10 @@
     <h3>Ramen Rater</h3>
   </header>
 
-  
-  <div id="ramen-menu">
-  
-  </div>
+  <!-- Ramen menu container -->
+  <div id="ramen-menu"></div>
 
-
+  <!-- Ramen detail section (for later updates) -->
   <div id="ramen-detail">
     <img class="detail-image" src="./assets/image-placeholder.jpg" alt="Insert Name Here" />
     <h2 class="name">Insert Name Here</h2>
@@ -27,30 +24,24 @@
 
   <h3>Rating:</h3>
   <p>
-    <span id='rating-display'>Insert rating here</span> / 10
+    <span id="rating-display">Insert rating here</span> / 10
   </p>
   <h3>Comment:</h3>
-  <p id='comment-display'>
+  <p id="comment-display">
     Insert comment here
   </p>
 
-
+  <!-- Form for adding new ramen -->
   <form id="new-ramen">
     <h4>Add New Ramen</h4>
-    <label for="new-name">Name: </label>
-    <input type="text" name="name" id="new-name" />
-    <label for="new-restaurant">Restaurant: </label>
-    <input type="text" name="restaurant" id="new-restaurant" />
-    <label for="new-image">Image: </label>
-    <input type="text" name="image" id="new-image" />
-    <label for="new-rating">Rating: </label>
-    <input type="number" name="rating" id="new-rating" />
-    <label for="new-comment">Comment: </label>
-    <textarea name="new-comment" name="new-comment" id="new-comment"></textarea>
-    <input type="submit" id='submit-button' value="Create" />
+    <label for="new-name">Name: <input type="text" name="name" id="new-name" required /></label><br>
+    <label for="new-restaurant">Restaurant: <input type="text" name="restaurant" id="new-restaurant" required /></label><br>
+    <label for="new-image">Image: <input type="text" name="image" id="new-image" /></label><br>
+    <label for="new-rating">Rating: <input type="number" name="rating" id="new-rating" min="1" max="10" required /></label><br>
+    <label for="new-comment">Comment:<textarea name="new-comment" id="new-comment"></textarea></label><br>
+
+    <input type="submit" id="submit-button" value="Create" />
+  <script src="index.js"></script>
   </form>
-
-</body>
-
+  </body>
 </html>
-
